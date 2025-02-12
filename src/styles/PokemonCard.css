@@ -22,17 +22,19 @@
   transition: transform 0.3s ease;
 }
 
+@media (hover: hover) {
+  .pokemon-card:hover .poke-img {
+    transform: scale(1.1) translateY(-0.5rem);
+  }
+
+  .pokemon-card:hover {
+    transform: translateY(-0.25rem);
+  }
+}
+
 .pokemon-card h3 {
   font-size: 1.5rem;
   align-self: center;
-}
-
-.pokemon-card:hover .poke-img {
-  transform: scale(1.1) translateY(-0.5rem);
-}
-
-.pokemon-card:hover {
-  transform: translateY(-0.25rem);
 }
 
 @media (min-width: 769px) and (max-width: 1280px) {

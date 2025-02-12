@@ -6,7 +6,6 @@ A memory card game built with React where players test their memory by clicking 
 
 ## Features
 
-- 🎮 Interactive card flipping gameplay
 - 🏆 Persistent best score tracking using localStorage
 - 🌟 Random Pokémon selection from Generation I
 - 🔄 Dynamic card shuffling after each click

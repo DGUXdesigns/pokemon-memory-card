@@ -14,12 +14,20 @@ function Gameboard() {
 
   useEffect(() => {
     async function fetchPokemon() {
-      const fetchedPokemon = await getRandomPokemon(8);
+      const fetchedPokemon = await getRandomPokemon(10);
       setPokemon(fetchedPokemon);
     }
 
     fetchPokemon();
   }, []);
+
+  // shuffle the deck
+  function shuffleArray(arr) {
+    return arr
+      .map((a) => [Math.random(), a])
+      .sort(([x], [y]) => x - y)
+      .map(([_, a]) => a);
+  }
 
   function handleCardClick(id) {
     if (prevPicked.includes(id)) {
@@ -34,6 +42,7 @@ function Gameboard() {
         localStorage.setItem('bestScore', score + 1);
       }
     }
+    setPokemon((prevPokemon) => shuffleArray(prevPokemon));
   }
 
   return (

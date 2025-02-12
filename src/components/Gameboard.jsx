@@ -14,7 +14,7 @@ function Gameboard() {
 
   useEffect(() => {
     async function fetchPokemon() {
-      const fetchedPokemon = await getRandomPokemon(10);
+      const fetchedPokemon = await getRandomPokemon(12);
       setPokemon(fetchedPokemon);
     }
 
